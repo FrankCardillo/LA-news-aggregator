@@ -10,13 +10,13 @@
   <h1><%= @error_msg %></h1>
   <form action="/articles/new_post" method="post">
   <label for="article_title">Article Title:</label>
-  <input type="text" id="article_title" name="article_title" value="<%= @article_title %>" required>
+  <input type="text" id="article_title" name="article_title" value="">
 
   <label for="article_url">Article URL:</label>
-  <input type="text" id="article_url" name="article_url" value="<%= @article_url %>" required>
+  <input type="text" id="article_url" name="article_url" value="">
 
   <label for="article_description">Article Description:</label>
-  <input type="text" id="article_description" name="article_description" value="<%= @article_description %>" required>
+  <input type="text" id="article_description" name="article_description" value="">
 
   <input type="submit">
 </form>
