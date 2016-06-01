@@ -4,6 +4,12 @@ require "csv"
 
 require_relative "models/article.rb"
 
+enable :sessions
+
+get "/" do
+  redirect "/articles"
+end
+
 get "/articles/new" do
   erb :post_article
 end
@@ -18,7 +24,7 @@ post "/articles/new_post" do
   @my_article.set_dupe_value
 
   if @my_article.check_for_empty_form
-    raise EmptyFormError, "You did not fill out all of the form fields."
+    raise EmptyFormError, "You did not fill out all form fields."
   elsif @my_article.check_description_length
     raise DescriptionLengthError, "Your description length is < 20 chars."
   elsif @my_article.check_dupe_value

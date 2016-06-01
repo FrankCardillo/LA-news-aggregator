@@ -7,16 +7,15 @@
 </head>
 
 <body>
-  <h1><%= @error_msg %></h1>
   <form action="/articles/new_post" method="post">
   <label for="article_title">Article Title:</label>
-  <input type="text" id="article_title" name="article_title" value="">
+  <input type="text" id="article_title" name="article_title" value="<%=flash[:article_title]%>">
 
   <label for="article_url">Article URL:</label>
-  <input type="text" id="article_url" name="article_url" value="">
+  <input type="text" id="article_url" name="article_url" value="<%=flash[:article_url]%>">
 
   <label for="article_description">Article Description:</label>
-  <input type="text" id="article_description" name="article_description" value="">
+  <input type="text" id="article_description" name="article_description" value="<%=flash[:article_description]%>">
 
   <input type="submit">
 </form>
